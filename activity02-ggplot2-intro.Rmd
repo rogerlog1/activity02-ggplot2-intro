@@ -209,20 +209,23 @@ Create graphs to explore the relationship between `bill_length_mm` and each of `
 Using these three graphs to discuss which of these three categorical variables seems to be contributing more to these two peaks and explain your reasoning.
 
 ```{r bill_length_by_species}
-
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = species)) +
+  geom_boxplot()
 ```
 
 
 ```{r bill_length_by_sex}
-
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = sex)) +
+  geom_boxplot()
 ```
 
 
 ```{r bill_length_by_island}
-
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = island)) +
+  geom_boxplot()
 ```
 
-**Response**:
+**Response**:It would appear that species is creating these points more than the other two, as the data for species is concentrated around 39 for Adelie and 46 for the other two.
 
 
 
